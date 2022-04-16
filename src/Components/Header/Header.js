@@ -5,9 +5,9 @@ import { Link, NavLink } from "react-router-dom";
 
 const Header = () => {
   return (
-    <Navbar collapseOnSelect expand="lg" bg="transparent" variant="light" >
+    <Navbar collapseOnSelect expand="lg" bg="transparent" variant="light" className="fixed-top">
       <Container>
-        <Navbar.Brand as={Link} to='/'>Strength Coach</Navbar.Brand>
+        <Navbar.Brand as={Link} to='/' className="text-white fs-2 fw-bold">Strength Coach</Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse
           id="responsive-navbar-nav "

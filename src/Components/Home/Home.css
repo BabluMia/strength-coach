@@ -1,3 +1,24 @@
 .home{
     overflow-x: hidden !important;
+    width: 100vw;
+    height: 90vh;
+    background-image: url('../img/1565318044.jpg') ;
+    background-size: cover;
+    background-repeat: no-repeat;
+    object-fit: cover;
+}
+.banner h1{
+    font-size: 60px;
+    position: relative;
+}
+.b-bottom{
+    border-bottom: 4px solid white ;
+    padding-bottom: 8px !important;
+}
+.banner h2{
+    font-size: 25px;
+    color: aquamarine;
+}
+.custom-btn{
+    border: 2px solid white !important;
 }
