@@ -1,11 +1,12 @@
 .home{
     overflow-x: hidden !important;
     width: 100vw;
-    height: 90vh;
+    height: 100vh;
     background-image: url('../img/1565318044.jpg') ;
     background-size: cover;
     background-repeat: no-repeat;
     object-fit: cover;
+    background-position: center;
 }
 .banner h1{
     font-size: 60px;
@@ -21,4 +22,16 @@
 }
 .custom-btn{
     border: 2px solid white !important;
+}
+/* services-about */
+.services-about p{
+    text-align: justify;
+}
+/* belive-text */
+.belive-container{
+    background-color: aliceblue !important;
+    width: 100vw;
+}
+.belive-text p{
+    text-align: center !important;
 }

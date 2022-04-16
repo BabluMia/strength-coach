@@ -1,11 +1,21 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Header.css";
 import { Container, Nav, Navbar } from "react-bootstrap";
 import { Link, NavLink } from "react-router-dom";
 
 const Header = () => {
+  const [fix , setFix] = useState(false)
+  const navEffect = () =>{
+    if(window.scrollY > 200){
+      setFix(true)
+    }else{
+      setFix(false)
+    }
+  }
+  // bg={(!fix ? 'transparent' : " dark")}
+  window.addEventListener('scroll' , navEffect)
   return (
-    <Navbar collapseOnSelect expand="lg" bg="transparent" variant="light" className="fixed-top">
+    <Navbar collapseOnSelect expand="lg" bg="dark"  variant="light" className={`fixed-top`}>
       <Container>
         <Navbar.Brand as={Link} to='/' className="text-white fs-2 fw-bold">Strength Coach</Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
