@@ -32,12 +32,13 @@ const Header = () => {
                 Home
               </NavLink>
             </Nav.Link>
-            <Nav.Link as={Link} to="/login">
+            
+            <Nav.Link as={Link} to="/blog">
               <NavLink
-                to="/login"
+                to="/blog"
                 className={({ isActive }) => (isActive ? "color" : "color2")}
               >
-                Login
+                Blog
               </NavLink>
             </Nav.Link>
             <Nav.Link as={Link} to="/contact">
@@ -46,6 +47,14 @@ const Header = () => {
                 className={({ isActive }) => (isActive ? "color" : "color2")}
               >
                 Contact
+              </NavLink>
+            </Nav.Link>
+            <Nav.Link as={Link} to="/login">
+              <NavLink
+                to="/login"
+                className={({ isActive }) => (isActive ? "color" : "color2")}
+              >
+                Login
               </NavLink>
             </Nav.Link>
           </Nav>
