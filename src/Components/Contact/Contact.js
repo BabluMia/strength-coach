@@ -10,7 +10,7 @@ const Contact = () => {
       </h2>
       <div className="w-50 mx-auto">
         <div className="mb-3">
-          <label for="exampleFormControlInput1" className="form-label mt-3">
+          <label htmlFor="exampleFormControlInput1" className="form-label mt-3">
             Your Name
           </label>
           <input
@@ -18,7 +18,7 @@ const Contact = () => {
             className="form-control"
             placeholder="Mr . Brayn"
           ></input>
-          <label for="exampleFormControlInput1" className="form-label mt-3">
+          <label htmlFor="exampleFormControlInput1" className="form-label mt-3">
             Email address
           </label>
           <input
@@ -28,7 +28,7 @@ const Contact = () => {
           ></input>
         </div>
         <div className="mb-3 mt-3">
-          <label for="exampleFormControlTextarea1" className="form-label">
+          <label htmlFor="exampleFormControlTextarea1" className="form-label">
             Example textarea
           </label>
           <textarea

@@ -11,7 +11,7 @@ const Blog = () => {
                 <div className="col-11 col-lg-8  w-lg-75 mx-auto">
                     <Accordion>
                         <Accordion.Item eventKey="0">
-                            <Accordion.Header>What Is Context API ?</Accordion.Header>
+                            <Accordion.Header>Authentication vs. Authorization</Accordion.Header>
                             <Accordion.Body>
                                 <p>
                                     Context API রিয়েক্টের একটি গুরুত্বপূর্ণ বিষয়।
@@ -21,7 +21,7 @@ const Blog = () => {
                             </Accordion.Body>
                         </Accordion.Item>
                         <Accordion.Item eventKey="1">
-                            <Accordion.Header>What is Semantic Tag?</Accordion.Header>
+                            <Accordion.Header>Why we use Firebase?</Accordion.Header>
                             <Accordion.Body>
                                 <p className='my-2'>
                                     Semantic  হলো html5 এর উপাদান  যা সব ধরনের ব্রাউজার সাপোর্ট করে। একটি ওয়েব পেজ কে বর্তমানে ৫ টি ভাগে ভাগ করা হয় যা Semantic element  যেমন - Header,Nav,Section,Article, Aside,Footer, ডকুমেন্ট কন্টেন্ট সহজ ও বোধগম্য কারার জন্য এগুলো ব্যবহার করা হয়
@@ -31,7 +31,7 @@ const Blog = () => {
                             </Accordion.Body>
                         </Accordion.Item>
                         <Accordion.Item eventKey="2">
-                            <Accordion.Header>Difference Between Inline , Block and Inline Block ?</Accordion.Header>
+                            <Accordion.Header>What other service Firebase provide us?</Accordion.Header>
                             <Accordion.Body>
                                 <p className='my-2'>
                                     Inline : কন্টেন্ট এর সাইজ অনুযায়ী আচরন করে থাকে।  আমি যদি একটা Div এ  Width,Height সেট ও করে দেই আর তার কন্টেন্ট যদি কম হয় তাহলে কন্টেন্টের সাইজ ই এপ্লাই হবে।

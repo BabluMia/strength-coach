@@ -2,61 +2,54 @@ import React, { useState } from "react";
 import "./Header.css";
 import { Container, Nav, Navbar } from "react-bootstrap";
 import { Link, NavLink } from "react-router-dom";
+import { useAuthState } from "react-firebase-hooks/auth";
+import auth from "../../firebase.init";
+import { signOut } from "firebase/auth";
 
 const Header = () => {
-  const [fix , setFix] = useState(false)
-  const navEffect = () =>{
-    if(window.scrollY > 200){
-      setFix(true)
-    }else{
-      setFix(false)
-    }
-  }
-  // bg={(!fix ? 'transparent' : " dark")}
-  window.addEventListener('scroll' , navEffect)
+  const [user] = useAuthState(auth);
+
+  const logOut = () => {
+    signOut(auth);
+  };
+
   return (
-    <Navbar collapseOnSelect expand="lg" bg="dark"  variant="light" className={`fixed-top`}>
+    <Navbar
+      collapseOnSelect
+      expand="lg"
+      bg="dark"
+      variant="light"
+      className={`fixed-top`}
+    >
       <Container>
-        <Navbar.Brand as={Link} to='/' className="text-white fs-2 fw-bold">Strength Coach</Navbar.Brand>
+        <Navbar.Brand as={Link} to="/" className="text-white fs-2 fw-bold">
+          Strength Coach
+        </Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse
           id="responsive-navbar-nav "
           className="justify-content-end"
         >
           <Nav>
-            <Nav.Link as={Link} to="/">
-              <NavLink
-                className={({ isActive }) => (isActive ? "color" : "color2")}
-                to={"/"}
-              >
-                Home
-              </NavLink>
+            <Nav.Link as={Link} to="/" className="color2">
+              Home
             </Nav.Link>
-            
-            <Nav.Link as={Link} to="/blog">
-              <NavLink
-                to="/blog"
-                className={({ isActive }) => (isActive ? "color" : "color2")}
-              >
-                Blog
-              </NavLink>
+
+            <Nav.Link as={Link} to="/blog" className="color2">
+              Blog
             </Nav.Link>
-            <Nav.Link as={Link} to="/contact">
-              <NavLink
-                to="/contact"
-                className={({ isActive }) => (isActive ? "color" : "color2")}
-              >
-                Contact
-              </NavLink>
+            <Nav.Link as={Link} to="/contact" className="color2">
+              Contact
             </Nav.Link>
-            <Nav.Link as={Link} to="/login">
-              <NavLink
-                to="/login"
-                className={({ isActive }) => (isActive ? "color" : "color2")}
-              >
+            {!user ? (
+              <Nav.Link as={Link} to="/login" className="color2">
                 Login
-              </NavLink>
-            </Nav.Link>
+              </Nav.Link>
+            ) : (
+              <Nav.Link as={Link} to="/login" onClick={logOut} className="color2">
+                Logout
+              </Nav.Link>
+            )}
           </Nav>
         </Navbar.Collapse>
       </Container>

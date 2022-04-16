@@ -1,0 +1,23 @@
+[
+    {
+        "id" : 1,
+        "quality":"Regular",
+        "price":"Free",
+        "desc" : "This is Mark from CA . I wish i provide You the best deal . This is our free trail for 1 month .If you try it I hope you get some facility from us .",
+        "img" : "https://www.rcotterillpt.com/uploads/1/3/4/3/134350959/online-and-in-person-personal-trainer_orig.jpg"
+    },
+    {
+        "id" : 2,
+        "quality":"Premium",
+        "price":"$20",
+        "desc" : "This is Mark from CA . I wish i provide You the best deal . This is our free trail for 1 month .If you try it I hope you get some facility from us .",
+        "img" : "https://www.rcotterillpt.com/uploads/1/3/4/3/134350959/rcotterill-mission_orig.jpg"
+    },
+    {
+        "id" : 3,
+        "quality":"Delux",
+        "price":"$35",
+        "desc" : "This is Mark from CA . I wish i provide You the best deal . This is our free trail for 1 month .If you try it I hope you get some facility from us .",
+        "img" : "https://www.rcotterillpt.com/uploads/1/3/4/3/134350959/rcpt-6.jpg"
+    }
+]
