@@ -1,0 +1,15 @@
+.color{
+    color: rgb(199, 120, 120);
+    font-size: 1.2rem;
+    text-decoration: none;
+}
+.color2{
+    color: rgb(42, 45, 39) !important;
+    font-size: 1.2rem;
+    text-decoration: none;
+}
+/* .header{
+    display: flex !important;
+    justify-content: flex-end !important;
+    align-items: center !important;
+} */
