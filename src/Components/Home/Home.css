@@ -12,10 +12,7 @@
     font-size: 60px;
     position: relative;
 }
-.b-bottom{
-    border-bottom: 4px solid white ;
-    padding-bottom: 8px !important;
-}
+
 .banner h2{
     font-size: 25px;
     color: aquamarine;

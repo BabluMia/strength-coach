@@ -1,52 +1,19 @@
 import "./Login.css";
-import React, { useEffect } from "react";
-import { Link, useNavigate } from "react-router-dom";
-import { RiFacebookCircleLine } from "react-icons/ri";
-import { BsGithub } from "react-icons/bs";
-import { FcGoogle } from "react-icons/fc";
-import {
-  useSignInWithGithub,
-  useSignInWithGoogle,
-  useSignInWithFacebook,
-  useAuthState,
-} from "react-firebase-hooks/auth";
-import auth from "../../firebase.init";
+import React from "react";
+import SocialLogin from "../SocialLogin/SocialLogin";
+import { Link } from "react-router-dom";
+
 
 const Login = () => {
-  const [user] = useAuthState(auth);
-  const [signInWithGoogle, user1, loading1, error1] = useSignInWithGoogle(auth);
-  const [signInWithGithub, user2, loading2, error2] = useSignInWithGithub(auth);
-  const [signInWithFacebook, user3, loading3, error3] =
-    useSignInWithFacebook(auth);
-  const navigate = useNavigate();
-  const handleGoogle = () => {
-    signInWithGoogle();
-  };
-  const handleFacebook = () => {
-    signInWithFacebook();
-  };
-  const handleGithub = () => {
-    signInWithGithub();
-  };
-  useEffect(() => {
-    if (user) {
-      navigate("/");
-    }
-  }, [user]);
+  
   return (
     <div className="form-body">
       <div className="container-main-form " id="container">
         <div className="form-container log-in-container">
           <form action="#">
             <h1>Login</h1>
-            <div className="social-container">
-              <RiFacebookCircleLine
-                className="social"
-                onClick={handleFacebook}
-              ></RiFacebookCircleLine>
-              <BsGithub className="social" onClick={handleGithub}></BsGithub>
-              <FcGoogle className="social" onClick={handleGoogle}></FcGoogle>
-            </div>
+           
+            <SocialLogin/>
             <span>or use your account</span>
             <input type="email" placeholder="Email" />
             <input type="password" placeholder="Password" />
