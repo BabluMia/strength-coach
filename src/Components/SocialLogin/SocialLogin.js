@@ -24,39 +24,28 @@ const SocialLogin = () => {
   const handleGoogle = () => {
     signInWithGoogle();
   };
-  if (error1) {
-    errorElem = (
-      <div>
-        <p>Error: {error1.message}</p>
-      </div>
-    );
-  }
+  
 
   const handleFacebook = () => {
     signInWithFacebook();
   };
-  if (error2) {
-    errorElem = (
-      <div>
-        <p>Error: {error2.message}</p>
-      </div>
-    );
-  }
+  
   const handleGithub = () => {
     signInWithGithub();
     
   };
-  if (error3) {
+  // social error
+  if (error1 || error2 || error3) {
     errorElem = (
       <div>
-        <p>Error: {error3.message}</p>
+        <p>Error: {error3?.message} {error2?.message} {error1?.message}</p>
       </div>
     );
   }
+  if(loading1 || loading2 || loading3){
 
-  if (user) {
-    navigate("/");
   }
+
 
   return (
     <>

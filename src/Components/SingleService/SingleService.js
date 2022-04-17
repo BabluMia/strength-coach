@@ -12,7 +12,7 @@ const SingleService = ({ service }) => {
       <h5 className="my-2">{quality}</h5>
       <p className="text-start px-3">{desc}</p>
       <h5>For:{price}</h5>
-      <Link to={'/contact'}>
+      <Link to={'/checkout'}>
         <button className="rounded-0 border border-dark  btn btn-transparent text-dark px-4 py-2 custom-btn fw-bold">
           CHECKOUT
         </button>

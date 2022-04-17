@@ -12,6 +12,8 @@ import AboutMe from "./Components/AboutMe/AboutMe";
 import { ToastContainer } from 'react-toastify';
 
 import 'react-toastify/dist/ReactToastify.css';
+import RequireAuth from "./Components/RequireAuth/RequireAuth";
+import CheckOut from "./Components/CheckOut/CheckOut";
 
 
 function App() {
@@ -24,6 +26,11 @@ function App() {
         <Route path="/login" element={<Login/>}></Route>
         <Route path="/register" element={<Register/>}></Route>
         <Route path="/blog" element={<Blog/>}></Route>
+        <Route path="/checkout" element={
+          <RequireAuth>
+            <CheckOut/>
+          </RequireAuth>
+        }></Route>
         <Route path="/aboutme" element={<AboutMe/>}></Route>
         <Route path="/contact" element={<Contact/>}></Route>
         <Route path="*" element={<NotFound/>}></Route>
