@@ -1,7 +1,14 @@
 import React from "react";
+import { useAuthState } from "react-firebase-hooks/auth";
+import { toast } from "react-toastify";
+import auth from "../../firebase.init";
 import "./Contact.css";
 
 const Contact = () => {
+  const [user] = useAuthState(auth)
+  const submit =()=>{
+    toast("Thanks For Submit")
+  }
   return (
     <div className="min-h my-5">
       <span className="text-white my-5">.</span>
@@ -16,7 +23,7 @@ const Contact = () => {
           <input
             type="Text"
             className="form-control"
-            placeholder="Mr . Brayn"
+            placeholder="Mr . Brayn" 
           ></input>
           <label htmlFor="exampleFormControlInput1" className="form-label mt-3">
             Email address
@@ -24,7 +31,7 @@ const Contact = () => {
           <input
             type="email"
             className="form-control"
-            placeholder="name@example.com"
+            placeholder='example@gmail.com' 
           ></input>
         </div>
         <div className="mb-3 mt-3">
@@ -34,10 +41,10 @@ const Contact = () => {
           <textarea
             className="form-control"
             id="exampleFormControlTextarea1"
-            rows="3"
+            rows="3" 
           ></textarea>
         </div>
-        <button className=" rounded-0 border border-dark my-4 btn btn-transparent text-dark px-4 py-2 me-4 custom-btn fw-bold">
+        <button className=" rounded-0 border border-dark my-4 btn btn-transparent text-dark px-4 py-2 me-4 custom-btn fw-bold" onClick={submit}>
           SUBMIT
         </button>
       </div>

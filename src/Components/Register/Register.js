@@ -3,6 +3,7 @@ import { useAuthState, useCreateUserWithEmailAndPassword, useUpdateProfile } fro
 import { Link, useNavigate} from "react-router-dom";
 import { toast } from 'react-toastify';
 import auth from '../../firebase.init';
+import Loading from '../Loading/Loading';
 import SocialLogin from '../SocialLogin/SocialLogin';
 
 
@@ -25,6 +26,13 @@ const Register = () => {
         await updateProfile({ displayName : name});
         
       };
+      let errorElem ;
+      if(error){
+        return errorElem = error?.message
+      }
+      if(loading){
+        return <Loading/>
+      }
       if(user){
         navigate('/checkout')
         toast('Send Verification!')
@@ -43,9 +51,8 @@ const Register = () => {
           <input type="text" name="name"  placeholder='Your Name' required />
           <input type="email" name="email" placeholder="Email" required />
           <input type="password" name="password" placeholder="Password" required />
-          {/* <input type="password" placeholder="Confirm Password" /> */}
-          {/* <a href="#">Forgot your password?</a> */}
           <button>Sign up</button>
+          <p>{errorElem}</p>
           <p>
             Already have an acount{" "}
             <span>

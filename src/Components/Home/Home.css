@@ -32,3 +32,37 @@
 .belive-text p{
     text-align: center !important;
 }
+.trainer{
+    background-image: url("https://mattroberts.co.uk/wp-content/uploads/matt-roberts-hero-5.jpg") ;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding: 40px 30px; 
+    min-height: 400px;
+}
+.eveolution{
+    background-image: url("https://mattroberts.co.uk/wp-content/uploads/matt-roberts-banner-1.jpg") ;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding: 40px 30px;
+    object-fit: cover;
+    min-height: 300px;
+}
+.eveolution .cont{
+    padding: 20px 30px;
+}
+.meet-btn{
+    font-size: 1.1rem;
+    border: 1px solid white !important;
+}
+@media only screen and (max-width: 576px) {
+    .banner h1{
+        font-size: 28px;
+    }
+    
+    .banner h2{
+        font-size: 18px;
+        color: aquamarine;
+    }
+  }

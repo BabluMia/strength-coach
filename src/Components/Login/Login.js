@@ -74,14 +74,13 @@ const Login = () => {
               Forget Password ?{" "}
               <Link
                 className="text-primary text-decoration-none pe-auto"
-                to="/"
-                onClick={resetPassword}
+                to="/login"
+                onClick={resetPassword} 
               >
                 Reset
               </Link>
             </p>
             {errorElement}
-            {/* <a href="#">Forgot your password?</a> */}
             <button type="submit">Log In</button>
             <p>
               New Here{" "}

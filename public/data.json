@@ -4,20 +4,35 @@
         "quality":"Regular",
         "price":"Free",
         "desc" : "This is Mark from CA  .I have lots of Experience in this field. I made lots of people happy by my service. This is our free trail for 1 month .If you try it I hope you get some facility from us .Lets get started",
-        "img" : "https://www.rcotterillpt.com/uploads/1/3/4/3/134350959/online-and-in-person-personal-trainer_orig.jpg"
+        "img" : "https://www.rcotterillpt.com/uploads/1/3/4/3/134350959/online-and-in-person-personal-trainer_orig.jpg",
+        "offer1":"15 Days free trail",
+        "offer2":"4 Days Per Week",
+        "offer3":"One To One Support",
+        "offer4":"Swming Facility",
+        "offer5":"Free Protin"
     },
     {
         "id" : 2,
         "quality":"Premium",
         "price":"$20",
         "desc" : "Mark here form CA . I'm a personal trainer from 2000 .I made lots of people happy by my service.  I will provide you a premium service with $20 per month . Your diat,yoga,train willbe included . ",
-        "img" : "https://www.rcotterillpt.com/uploads/1/3/4/3/134350959/rcotterill-mission_orig.jpg"
+        "img" : "https://www.rcotterillpt.com/uploads/1/3/4/3/134350959/rcotterill-mission_orig.jpg",
+        "offer1":"1 Year Premium Subc.",
+        "offer2":"5 Days A Week.",
+        "offer3":"One To One Support",
+        "offer4":" Locker Services",
+        "offer5":"Free Protin & Snacs"
     },
     {
         "id" : 3,
         "quality":"Delux",
         "price":"$35",
         "desc" : "This is Mark from CA . I wish you are doing well . I want o intruduce about our delux services for only $35 per month .I will train You 4 days in a week at your place .Hope you Join with me .",
-        "img" : "https://www.rcotterillpt.com/uploads/1/3/4/3/134350959/rcpt-6.jpg"
+        "img" : "https://www.rcotterillpt.com/uploads/1/3/4/3/134350959/rcpt-6.jpg",
+        "offer1":"Life Time Premium Subc.",
+        "offer2":"Full Week Support",
+        "offer3":"Home Support ",
+        "offer4":" Free Yoga",
+        "offer5":"Free Protin & Cal"
     }
 ]
