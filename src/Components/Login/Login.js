@@ -9,9 +9,10 @@ import {
 } from "react-firebase-hooks/auth";
 import auth from "../../firebase.init";
 import { toast } from "react-toastify";
+import Loading from "../Loading/Loading";
 
 const Login = () => {
-  const [user] = useAuthState(auth)
+  const [user] = useAuthState(auth);
   const [signInWithEmailAndPassword, user1, loading, error] =
     useSignInWithEmailAndPassword(auth);
 
@@ -25,16 +26,16 @@ const Login = () => {
   let from = location.state?.from?.pathname || "/";
 
   let errorElement;
-
+  if (loading) {
+    return <Loading />;
+  }
   const handleSubmit = (event) => {
     event.preventDefault();
     const email = emailRef.current.value;
     const password = passwordRef.current.value;
     signInWithEmailAndPassword(email, password);
-    
   };
-  
-  
+
   if (error) {
     errorElement = (
       <div>
@@ -42,14 +43,13 @@ const Login = () => {
       </div>
     );
   }
-  
 
   const resetPassword = async () => {
     const email = emailRef.current.value;
     await sendPasswordResetEmail(email);
     toast("Sent reset email");
   };
-  
+
   if (user) {
     navigate(from, { replace: true });
   }
