@@ -8,13 +8,13 @@ const AboutMe = () => {
       <div className="container-fluid about-bg">
       <h1 className="text-center mb-5">ABOUT SECTION</h1>
         <div className="row container mx-auto mt-2 mb-5">
-          <div className="col-5 my-5 ">
+          <div className="col-6 col-lg-5 my-5 pb-0 pb-lg-5">
             <img
               src="https://i.ibb.co/99DnPY8/IMG-20211217-093443-removebg-preview.png"
-              alt=""
+              alt="" className="pb-0 pb-lg-5"
             />
           </div>
-          <div className="col-6 mt-5">
+          <div className="col-8 col-lg-6 mt-5 pt-0 pt-lg-5">
                 <h4 className="mt-5">ABOUT ME</h4>
                 <p className="my-3">
                 I'm Bablu From Sylhet. I'm a student of Degree pass course. In 2022 IT is the most valuable sector in the world. I have lots of interest in this sector. That's why I started learning front-end development. I started with HTML in 2020 but I was distracted for many reasons many times. In 2021 I know about JS but I was a lot Scared about JS. In 2022 I learned the core concept of JS and right now I'm learning React one of the most frameworks in the world.
