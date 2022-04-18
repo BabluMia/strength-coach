@@ -24,25 +24,21 @@ const Login = () => {
 
   const location = useLocation();
 
-  const [forEmail , setForEmail] = useState(false)
-
   let from = location.state?.from?.pathname || "/";
 
   let errorElement;
   if (loading) {
     return <Loading />;
   }
+  // form submit
   const handleSubmit = (event) => {
     event.preventDefault();
     const email = emailRef.current.value;
     const password = passwordRef.current.value;
     signInWithEmailAndPassword(email, password);
-    if(email !== ''){
-      setForEmail(email)
-    }
     
   };
-
+// error
   if (error) {
     errorElement = (
       <div>
@@ -50,15 +46,12 @@ const Login = () => {
       </div>
     );
   }
-
+// reset pasword
   const resetPassword = async () => {
     const email = emailRef.current.value;
-    // await sendPasswordResetEmail(email);
-    // toast("Sent reset email");
-    sendPasswordResetEmail(auth , email)
-    .then(()=>{
-      toast("Sent reset email");
-    })
+    await sendPasswordResetEmail(email);
+    toast("Sent reset email");
+    
   };
 
   if (user) {
