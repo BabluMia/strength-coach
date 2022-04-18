@@ -1,5 +1,5 @@
 import "./Login.css";
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import SocialLogin from "../SocialLogin/SocialLogin";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import {
@@ -10,6 +10,7 @@ import {
 import auth from "../../firebase.init";
 import { toast } from "react-toastify";
 import Loading from "../Loading/Loading";
+import { Button } from "react-bootstrap";
 
 const Login = () => {
   const [user] = useAuthState(auth);
@@ -23,6 +24,8 @@ const Login = () => {
 
   const location = useLocation();
 
+  const [forEmail , setForEmail] = useState(false)
+
   let from = location.state?.from?.pathname || "/";
 
   let errorElement;
@@ -34,6 +37,10 @@ const Login = () => {
     const email = emailRef.current.value;
     const password = passwordRef.current.value;
     signInWithEmailAndPassword(email, password);
+    if(email !== ''){
+      setForEmail(email)
+    }
+    
   };
 
   if (error) {
@@ -46,8 +53,12 @@ const Login = () => {
 
   const resetPassword = async () => {
     const email = emailRef.current.value;
-    await sendPasswordResetEmail(email);
-    toast("Sent reset email");
+    // await sendPasswordResetEmail(email);
+    // toast("Sent reset email");
+    sendPasswordResetEmail(auth , email)
+    .then(()=>{
+      toast("Sent reset email");
+    })
   };
 
   if (user) {
@@ -69,22 +80,27 @@ const Login = () => {
               ref={passwordRef}
               type="password"
               placeholder="Password"
-            />
-            <p>
+            /> 
+            
+               <p>
               Forget Password ?{" "}
               <Link
                 className="text-primary text-decoration-none pe-auto"
                 to="/login"
-                onClick={resetPassword} 
-              >
+                
+              > <Button className="bg-white text-dark border-0 px-2" onClick={resetPassword} >
                 Reset
+              </Button>
+                
               </Link>
-            </p>
+            </p> 
+            
+            
             {errorElement}
             <button type="submit">Log In</button>
             <p>
               New Here{" "}
-              <span>
+              <span className="fw-bold">
                 <Link to="/register">Register</Link>
               </span>
             </p>

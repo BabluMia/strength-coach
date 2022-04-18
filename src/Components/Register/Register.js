@@ -24,6 +24,7 @@ const Register = () => {
         
         await  createUserWithEmailAndPassword(email, password);
         await updateProfile({ displayName : name});
+        toast('Send Verification!')
         
       };
       let errorElem ;
@@ -34,8 +35,7 @@ const Register = () => {
         return <Loading/>
       }
       if(user){
-        navigate('/checkout')
-        toast('Send Verification!')
+        navigate('/home')
       }
       
    
@@ -55,7 +55,7 @@ const Register = () => {
           <p>{errorElem}</p>
           <p>
             Already have an acount{" "}
-            <span>
+            <span className="fw-bold">
               <Link to="/login">Login</Link>
             </span>
           </p>
