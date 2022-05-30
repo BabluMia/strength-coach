@@ -1,6 +1,6 @@
 # Strength Coach || React
 
-Github [See Repo](https://github.com/programming-hero-web-course-4/independent-service-provider-BabluMia).
+Github [See Repo](https://github.com/BabluMia/strength-coach).
 
 ## Firebase Link
 Open [Live Link](https://assignment-10-ad65f.web.app/) to view it in your browser.
